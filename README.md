@@ -1,15 +1,15 @@
 # Impact of Coronavirus on the global economy
 
 ## Content
-- [Project Description](#project-description)
-- [Gathering Data & Limitations](#gathering-data-&-limitations)
-- [Assumptions](#assumptions)
-- [Data Cleaning & Merging](#data-cleaning-&-merging)
-- [Results](#results)
-- [Conclusions](#conclusions)
-- [Future Questions](#future-questions-&-improvements)
-- [Files](#files)
-- [Resources](#resources)
+- [Project Description](##project-description)
+- [Gathering Data & Limitations](##gathering-data-&-limitations)
+- [Assumptions](##assumptions)
+- [Data Cleaning & Merging](##data-cleaning-&-merging)
+- [Results](##results)
+- [Conclusions](##conclusions)
+- [Future Questions](##future-questions-&-improvements)
+- [Files](##files)
+- [Resources](##resources)
 
 ## Project Description  
 For this project we studied the impact of coronavirus on the global economy. For this, we looked at the most popular stock markets in the world and decided to study 7 countries: China, France, Germany, Japan, Italy, Spain and the US.
@@ -109,8 +109,8 @@ Kanban
 
 
 ## Resources
-- [Macrotrends](#https://www.macrotrends.net)
-- [Yahoo Finance](#https://de.finance.yahoo.com)
-- [Investing](#https://www.investing.com)
-- [Coronavirus COVID 19 API](#https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#cc76052f-6601-4645-80e5-ca7aaa36f8ef)
-- [GitHub Repo of the Johns Hopkins University](#https://github.com/CSSEGISandData/COVID--19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
+- [Macrotrends](https://www.macrotrends.net)
+- [Yahoo Finance](https://de.finance.yahoo.com)
+- [Investing](https://www.investing.com)
+- [Coronavirus COVID 19 API](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#cc76052f-6601-4645-80e5-ca7aaa36f8ef)
+- [GitHub Repo of the Johns Hopkins University](https://github.com/CSSEGISandData/COVID--19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
