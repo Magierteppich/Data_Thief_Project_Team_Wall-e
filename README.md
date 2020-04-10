@@ -1,15 +1,15 @@
 # Impact of Coronavirus on the global economy
 
 ## Content
-- [Project Description](##project-description)
-- [Gathering Data & Limitations](##gathering-data-&-limitations)
-- [Assumptions](##assumptions)
-- [Data Cleaning & Merging](##data-cleaning-&-merging)
-- [Results](##results)
-- [Conclusions](##conclusions)
-- [Future Questions](##future-questions-&-improvements)
-- [Files](##files)
-- [Resources](##resources)
+- [Project Description](#project-description)
+- [Gathering Data & Limitations](#gathering-data-&-limitations)
+- [Assumptions](#assumptions)
+- [Data Cleaning & Merging](#data-cleaning-&-merging)
+- [Results](#results)
+- [Conclusions](#conclusions)
+- [Future Questions](#future-questions-&-improvements)
+- [Files](#files)
+- [Resources](#resources)
 
 ## Project Description  
 For this project we studied the impact of coronavirus on the global economy. For this, we looked at the most popular stock markets in the world and decided to study 7 countries: China, France, Germany, Japan, Italy, Spain and the US.
@@ -102,10 +102,10 @@ The plots mentioned are shown on the slides presentation for better visualizatio
 
 
 ## Files
-Data
-Notebooks
-Slides
-Kanban 
+- [Data](/data/)
+- [Notebooks](https://github.com/Magierteppich/Data_Thief_Project_Team_Wall-e/tree/master/Jupyter_Notebooks)
+- [Slides](COVID vs Stock Markets.pdf)
+- [Kanban](https://github.com/users/Magierteppich/projects/1)
 
 
 ## Resources
