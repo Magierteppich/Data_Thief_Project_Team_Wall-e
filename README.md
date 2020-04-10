@@ -24,7 +24,7 @@ We started by analyzing 9 stock market indexes for these countries, in which thr
 
 
 ## Gathering Data & Limitations
-###Coronavirus
+### Coronavirus
 * Johns Hopkins Resource Center
     1. Coronavirus daily cumulative recorded cases for each country
     2. Coronavirus daily cumulative recorded deaths for each country
@@ -33,7 +33,7 @@ We started by analyzing 9 stock market indexes for these countries, in which thr
     
 Due to the fact that Johns Hopkins data started from 22-01-2020, we went to the API in order to obtain the first recorded cases, which demonstrated that China began with 548 cases on 22-01-2020, meaning that they first started to record data on this day.
 
-###Stock Market Values
+### Stock Market Values
 * We gather daily stock market values from 2019 to 07-04-2020 for the indexes mentioned previously from the following websites:
     1. Macrotrends (France, Germany, Japan, USA)
     2. Investing (Spain, Italy)
@@ -44,61 +44,61 @@ Due to the fact that Johns Hopkins data started from 22-01-2020, we went to the 
     the requests results returned "None" values.
 
 ## Assumptions
-The indexes used truly reflect the development of the financial market. 
-There is a correlation between the financial index and the development of the pandemic. 
+    1. The indexes used truly reflect the development of the financial market. 
+    2. There is a correlation between the financial index and the development of the pandemic. 
 
 
 ## Data Cleaning & Merging
-###Finance
-Some of the data included highest and lowest daily values for the index, for first we got an average daily value in order to have a Data Frame with dates and values for each index.
-The format was changed to date format for the dates and to float for the values.
-The tables for each index were merged together with the date key.
-After merging, there were a lot of null values during the same dates which were weekends. For this, the data was interpolated to fill up the null values.
-A calculation was made to get the percentage of increase or decrease for each index using the 7-01-2020 as a base value. We decided on this date because it was the first data recorded for most of the indexes, due to the fact that before that New Year was celebrated and a weekend followed.
-A new Data Frame showing a summary of the normalized index values with the minimum, maximum and newest value for each of them.
+### Finance
+    1. Some of the data included highest and lowest daily values for the index, for first we got an average daily value in order to have a Data Frame with dates and values for each index.
+    2. The format was changed to date format for the dates and to float for the values.
+    3. The tables for each index were merged together with the date key.
+    4. After merging, there were a lot of null values during the same dates which were weekends. For this, the data was interpolated to fill up the null values.
+    5. A calculation was made to get the percentage of increase or decrease for each index using the 7-01-2020 as a base value. We decided on this date because it was the first data recorded for most of the indexes, due to the fact that before that New Year was celebrated and a weekend followed.
+    6. A new Data Frame showing a summary of the normalized index values with the minimum, maximum and newest value for each of them.
 
-###Coronavirus
-The data obtained from the Johns Hopkins Data Center was daily cumulative values of recorded cases for each country. First, the data was grouped by the countries for this project, adding the values for each date.
-The same process was made for the daily cumulative recorded death cases.
-A function was defined in order to calculate the daily new cases for each country, creating a new Data Frame for daily cases recorded.
-Columns for the total recorded cases and total deaths for each country were added.
-A third column with the actual 2020 population for each country was added, in order to create a new column with the deaths per 1 million habitants for each country. 
-The following summary Data Frames were created:
-Total cases per country
-Maximum daily cases recorded per country
-Total cases, total deaths and deaths per 1 million per country
+### Coronavirus
+    1. The data obtained from the Johns Hopkins Data Center was daily cumulative values of recorded cases for each country. First, the data was grouped by the countries for this project, adding the values for each date.
+    2. The same process was made for the daily cumulative recorded death cases.
+    3. A function was defined in order to calculate the daily new cases for each country, creating a new Data Frame for daily cases recorded.
+    4. Columns for the total recorded cases and total deaths for each country were added.
+    5. A third column with the actual 2020 population for each country was added, in order to create a new column with the deaths per 1 million habitants for each country. 
+    6. The following summary Data Frames were created:
+        * Total cases per country
+        * Maximum daily cases recorded per country
+        * Total cases, total deaths and deaths per 1 million per country
 
-###Plotting
+### Plotting
 The plots mentioned are shown on the slides presentation for better visualization.
 
 * Finance
-A figure was made containing 7 axes to plot line graphs for the dates vs. the percentage increase/decrease of the value for each country.
+    - A figure was made containing 7 axes to plot line graphs for the dates vs. the percentage increase/decrease of the value for each country.
 *Coronavirus
-A figure was made containing 7 axes to plot bar graphs for better representations for the dates vs. the covid daily cases for each country.
+    - A figure was made containing 7 axes to plot bar graphs for better representations for the dates vs. the covid daily cases for each country.
 *Merging
-Both final Data Frames were merged together in order to present both data in one graph (dual plotting). This merging was done with the date key.
-On these graphs the stock market normalized values are represented in color red, and the coronavirus daily cases are represented in blue.
+    - Both final Data Frames were merged together in order to present both data in one graph (dual plotting). This merging was done with the date key.
+    - On these graphs the stock market normalized values are represented in color red, and the coronavirus daily cases are represented in blue.
 
 ## Results
-All financial indexes analysed (except the Chinese index) followed a similar pattern and they all started to decrease by mid of February.  
-CAC 40 (France) suffered the greatest loss of almost 40%. FTSE (Italy) went through significant ups and downs and it even had the greatest gain of 7% compared to the other indexes. 
-As of today, IBEX (Spain) has suffered the most (0,73 compared to 07-01-2020). And SSE (China) is doing the best (0,91 compared to 07-01-2020). 
-The number of confirmed cases of covid-19 over time followed a cluster approach for the countries considered: first China, second Europe and then the US.
-Until now (10-04-2020), the countries most affected in terms of deaths due to covid-19 are: Spain, Italy and France and to a lesser degree Germany, the US and China (number of deaths for 1 million inhabitants).
+* All financial indexes analysed (except the Chinese index) followed a similar pattern and they all started to decrease by mid of February. 
+* CAC 40 (France) suffered the greatest loss of almost 40%. FTSE (Italy) went through significant ups and downs and it even had the greatest gain of 7% compared to the other indexes. 
+* As of today, IBEX (Spain) has suffered the most (0,73 compared to 07-01-2020). And SSE (China) is doing the best (0,91 compared to 07-01-2020). 
+* The number of confirmed cases of covid-19 over time followed a cluster approach for the countries considered: first China, second Europe and then the US.
+* Until now (10-04-2020), the countries most affected in terms of deaths due to covid-19 are: Spain, Italy and France and to a lesser degree Germany, the US and China (number of deaths for 1 million inhabitants).
 
 ## Conclusions  
-The stock market is plummeting as the number of covid-19 cases is increasing globally.
-Most national stock market indexes dropped a few days before the actual drastic increase of confirmed cases for each country. It seems that the global economy and the stock market were anticipating measures of confinement and loss of economic activities before governments even started to take actions.  
-The stock market index considered for China (Shanghai Stock Exchange, SSE) did not decrease as much as other national indexes. This is likely due to the fact that China has a more regulated financial and economical systems than the other countries studied for this project.
+* The stock market is plummeting as the number of covid-19 cases is increasing globally.
+* Most national stock market indexes dropped a few days before the actual drastic increase of confirmed cases for each country. It seems that the global economy and the stock market were anticipating measures of confinement and loss of economic activities before governments even started to take actions.  
+* The stock market index considered for China (Shanghai Stock Exchange, SSE) did not decrease as much as other national indexes. This is likely due to the fact that China has a more regulated financial and economical systems than the other countries studied for this project.
 
 
 
 ## Future Questions & Improvements
 
-Further industrial specific indexes could be analysed to better understand the impact of the pandemic on particular industries, e.g. tourism. 
-More in-depth understanding of the Chinese financial market could help us to better understand why the Chineses index performed differently compared to all others. 
-Include further countries for which the number of confirmed cases starts to increase at a later date.
-Follow-up on the evolution of the stock market indexes if/when economic stimulus programs are adopted (e.g. Eurobonds). 
+* Further industrial specific indexes could be analysed to better understand the impact of the pandemic on particular industries, e.g. tourism. 
+* More in-depth understanding of the Chinese financial market could help us to better understand why the Chineses index performed differently compared to all others. 
+* Include further countries for which the number of confirmed cases starts to increase at a later date.
+* Follow-up on the evolution of the stock market indexes if/when economic stimulus programs are adopted (e.g. Eurobonds). 
 
 
 ## Files
