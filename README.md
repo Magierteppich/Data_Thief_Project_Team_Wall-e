@@ -44,26 +44,26 @@ Due to the fact that Johns Hopkins data started from 22-01-2020, we went to the 
     the requests results returned "None" values.
 
 ## Assumptions
-    1. The indexes used truly reflect the development of the financial market. 
-    2. There is a correlation between the financial index and the development of the pandemic. 
+   1. The indexes used truly reflect the development of the financial market. 
+   2. There is a correlation between the financial index and the development of the pandemic. 
 
 
 ## Data Cleaning & Merging
 ### Finance
-    1. Some of the data included highest and lowest daily values for the index, for first we got an average daily value in order to have a Data Frame with dates and values for each index.
-    2. The format was changed to date format for the dates and to float for the values.
-    3. The tables for each index were merged together with the date key.
-    4. After merging, there were a lot of null values during the same dates which were weekends. For this, the data was interpolated to fill up the null values.
-    5. A calculation was made to get the percentage of increase or decrease for each index using the 7-01-2020 as a base value. We decided on this date because it was the first data recorded for most of the indexes, due to the fact that before that New Year was celebrated and a weekend followed.
-    6. A new Data Frame showing a summary of the normalized index values with the minimum, maximum and newest value for each of them.
+   1. Some of the data included highest and lowest daily values for the index, for first we got an average daily value in order to have a Data Frame with dates and values for each index.
+   2. The format was changed to date format for the dates and to float for the values.
+   3. The tables for each index were merged together with the date key.
+   4. After merging, there were a lot of null values during the same dates which were weekends. For this, the data was interpolated to fill up the null values.
+   5. A calculation was made to get the percentage of increase or decrease for each index using the 7-01-2020 as a base value. We decided on this date because it was the first data recorded for most of the indexes, due to the fact that before that New Year was celebrated and a weekend followed.
+   6. A new Data Frame showing a summary of the normalized index values with the minimum, maximum and newest value for each of them.
 
 ### Coronavirus
-    1. The data obtained from the Johns Hopkins Data Center was daily cumulative values of recorded cases for each country. First, the data was grouped by the countries for this project, adding the values for each date.
-    2. The same process was made for the daily cumulative recorded death cases.
-    3. A function was defined in order to calculate the daily new cases for each country, creating a new Data Frame for daily cases recorded.
-    4. Columns for the total recorded cases and total deaths for each country were added.
-    5. A third column with the actual 2020 population for each country was added, in order to create a new column with the deaths per 1 million habitants for each country. 
-    6. The following summary Data Frames were created:
+   1. The data obtained from the Johns Hopkins Data Center was daily cumulative values of recorded cases for each country. First, the data was grouped by the countries for this project, adding the values for each date.
+   2. The same process was made for the daily cumulative recorded death cases.
+   3. A function was defined in order to calculate the daily new cases for each country, creating a new Data Frame for daily cases recorded.
+   4. Columns for the total recorded cases and total deaths for each country were added.
+   5. A third column with the actual 2020 population for each country was added, in order to create a new column with the deaths per 1 million habitants for each country. 
+   6. The following summary Data Frames were created:
         * Total cases per country
         * Maximum daily cases recorded per country
         * Total cases, total deaths and deaths per 1 million per country
@@ -109,8 +109,8 @@ Kanban
 
 
 ## Resources
-[Macrotrends](#https://www.macrotrends.net)
-[Yahoo Finance](#https://de.finance.yahoo.com)
-[Investing](#https://www.investing.com)
-[Coronavirus COVID 19 API](#https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#cc76052f-6601-4645-80e5-ca7aaa36f8ef)
-[GitHub Repo of the Johns Hopkins University](#https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
+- [Macrotrends](#https://www.macrotrends.net)
+- [Yahoo Finance](#https://de.finance.yahoo.com)
+- [Investing](#https://www.investing.com)
+- [Coronavirus COVID 19 API](#https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#cc76052f-6601-4645-80e5-ca7aaa36f8ef)
+- [GitHub Repo of the Johns Hopkins University](#https://github.com/CSSEGISandData/COVID--19/tree/master/csse_covid_19_data/csse_covid_19_time_series)
